@@ -214,14 +214,36 @@
         "---------------------------ESERCIZIO 9---------------------------"
       );
 
-      const makeItClickable = function () {};
-
+      const makeItClickable = function () {
+        const title = document.getElementsByTagName("h1")[0];
+        title.addEventListener("click", function () {
+          let contentTitle = title.textContent;
+          let newContentTitle = contentTitle.slice(0, -1);
+          title.textContent = newContentTitle;
+        });
+      };
+      makeItClickable();
+      console.log(
+        "rimuovi l'ultima lettera dall'h1 ogni volta che l'utente lo clicca"
+      );
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
+      console.log(
+        "---------------------------ESERCIZIO 10---------------------------"
+      );
 
-      const revealFooterLink = function () {};
-
+      const revealFooterLink = function () {
+        const footer = document.getElementsByTagName("footer")[0];
+        footer.addEventListener("click", function () {
+          const link = document.querySelector("footer a");
+          alert(link.href);
+        });
+      };
+      revealFooterLink();
+      console.log(
+        "al click sul footer, rivela l'URL del link interno come contenuto di un alert()"
+      );
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
@@ -235,13 +257,13 @@
 
       const addRow = function () {};
 
-      /* ESERCIZIO 14
+      /* ESERCIZIO 13
         Crea una funzione che nasconda le immagini della tabella quando eseguita
       */
 
       const hideAllImages = function () {};
 
-      /* EXTRA ESERCIZIO 15
+      /* EXTRA ESERCIZIO 14
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
 
